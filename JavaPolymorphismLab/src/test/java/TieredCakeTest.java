@@ -29,5 +29,11 @@ public class TieredCakeTest {
 
     }
 
+    @Test
+    public void tieredCakeHasDisplayName(){
+        tieredCake = new TieredCake("Wedding cake", "Fruit cake", 350.00, 19.00, "Vanilla", "Petals", 4);
+        assertThat(tieredCake.getDisplayName()).isEqualTo("WEDDING CAKE - FRUIT CAKE - £350.0");
+    }
+
 
 }

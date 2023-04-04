@@ -27,4 +27,15 @@ public class CupcakeTest {
         cupcake.setSprinkles(false);
         assertThat(cupcake.getSprinkles()).isEqualTo(false);
     }
+
+    @Test
+    public void canAddSprinkles(){
+        assertThat(cupcake.addSprinkles()).isEqualTo("Add sprinkles");
+    }
+
+    @Test
+    public void cupcakeHasDisplayName(){
+        cupcake = new Cupcake("Oreo dream", "Oreo", 5.00, 1.00, "Oreo", "Oreo crumbs", false);
+        assertThat(cupcake.getDisplayName()).isEqualTo("OREO DREAM - OREO - £5.0");
+    }
 }

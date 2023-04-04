@@ -1,6 +1,8 @@
-public abstract class Cake {
+import interfaces.ISell;
 
-    private String name;
+public abstract class Cake implements ISell {
+
+    protected String name;
     private String baseFlavour;
     private double sellPrice;
     private double cost;
@@ -33,4 +35,8 @@ public abstract class Cake {
         return (sellPrice - cost);
     }
 
+    public abstract String orderMessage();
+    public String getDisplayName(){
+        return String.format("%s - %s - £%s" , this.name.toUpperCase(), this.baseFlavour.toUpperCase(), this.sellPrice);
+    }
 }

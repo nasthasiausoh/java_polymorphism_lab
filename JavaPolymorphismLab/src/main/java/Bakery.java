@@ -37,6 +37,17 @@ public class Bakery {
     public void addCake(Cake cake) {
         this.cakes.add(cake);
     }
+
+    public String orderMessage(){
+        return "You have ordered" + " at " +  name;
+    }
+
+
+    public String orderMessage(String ImprovedOrderMessage){
+        return "Thank you for ordering at " +  name + "! Check your email address for confirmation details";
+    }
+
+
 }
 
 

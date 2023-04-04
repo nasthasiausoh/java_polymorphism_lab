@@ -19,6 +19,14 @@ public class Cupcake extends Cake {
         this.sprinkles = sprinkles;
     }
 
+    public String addSprinkles(){
+        return "Add sprinkles";
+    }
+
+    public String orderMessage(){
+        return "You have ordered" + name;
+    }
+
 
 
 

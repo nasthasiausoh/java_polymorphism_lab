@@ -7,11 +7,14 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BakeryTest {
     Bakery bakery;
+    Cake cake;
+
 
     @BeforeEach
     public void setUp(){
         bakery = new Bakery("Cake World");
     }
+
 
     @Test
     public void bakeryHasName(){
@@ -40,4 +43,14 @@ public class BakeryTest {
 
     }
 
+    @Test
+    public void canUseOrderMessage(){
+        assertThat(bakery.orderMessage()).isEqualTo("You have ordered at Cake World");
+    }
+
+    @Test
+    public void canUseOverriddenOrderMessage(){
+        assertThat(bakery.orderMessage("")).isEqualTo(
+                "Thank you for ordering at Cake World! Check your email address for confirmation details");
+    }
 }

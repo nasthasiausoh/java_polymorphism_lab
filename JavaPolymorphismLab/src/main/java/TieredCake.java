@@ -1,5 +1,6 @@
 public class TieredCake extends Cake {
 
+    TieredCake tieredCake;
     private int tiers;
 
     public TieredCake(String name, String baseFlavour, double sellPrice, double cost, String frostingFlavour, String toppings, int tiers) {
@@ -14,4 +15,8 @@ public class TieredCake extends Cake {
     public void setTiers(int tiers) {
         this.tiers = tiers;
     }
+    public String orderMessage(){
+        return "You have ordered" + name;
+    }
+
 }

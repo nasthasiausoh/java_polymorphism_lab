@@ -29,4 +29,10 @@ public class Traybake extends Cake {
     public void setNumberOfSlices(int numberOfSlices) {
         this.numberOfSlices = numberOfSlices;
     }
+
+    public String orderMessage(){
+        return "You have ordered" + name;
+    }
+
+
 }
